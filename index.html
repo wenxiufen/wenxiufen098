@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-size: 18px;
+            font-weight: 400;
+            color:red;
+            list-style-type: none;
+            text-decoration: none;
+            box-sizing: border-box;
+            font-family: 微软雅黑;
+            line-height: 60px;
+        }
+        body{
+            background-color:white;
+        }
+        .yijihezi{
+            width: 120px;
+            height: auto;
+            margin: 54px 0 0 550px;
+        }
+        .yijiliebiao{
+            width: 120px;
+        }
+        .yijiliebiao>li{
+            width: 120px;
+            height: 150px;
+            position: relative;
+        }
+        li{
+            display: flex;
+            justify-content: center;
+        }
+        .erjihezi{
+            position: absolute;
+            left:120px;
+            bottom:50px;
+            background-color:blue;
+            padding: 0;
+            width: 0;
+            overflow: hidden;
+            transition: all 300ms linear;
+        }
+        .erjihezi a{
+            color: black;
+            font-size: 16px;
+            line-height: 40px;
+        }
+        .erjiliebiao{
+            width: 120px;
+        }
+        .erjiliebiao>li{
+            width: 120px;
+            height:40px;
+        }
+        .yijiliebiao>li:hover .erjihezi{
+            width: 360px;
+            padding: 10px;
+        }
+        .yijiliebiao>li>a::after{
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 0;
+            height: 60px;
+            background-color: yellow;
+            z-index: -1;
+            transition: all 300ms linear;
+}
+        .yijiliebiao>li:hover a::after{
+            width: 120px;
+        }
+    </style>
+</head>
+<body>
+    <div class="yijihezi">
+        <ul class="yijiliebiao">
+            <li>
+                <a href=" ">熊出没</a >
+                <div class="erjihezi">
+                    <ul class="erjiliebiao">
+                        <li><a href="#">熊大</a ></li>
+                        <li><a href="#">熊二</a ></li>
+                        <li><a href="#">光头强</a ></li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <a href="#">仙逆</a >
+                <div class="erjihezi">
+                    <ul class="erjiliebiao">
+                        <li><a href="#">王林</a ></li>
+                        <li><a href="#">曾牛</a ></li>
+                        <li><a href="#">李慕婉</a ></li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <a href="#">不良人</a >
+                <div class="erjihezi">
+                    <ul class="erjiliebiao">
+                        <li><a href="#">李星云</a ></li>
+                        <li><a href="#">姬如雪</a ></li>
+                        <li><a href="#">将臣</a ></li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
